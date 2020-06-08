@@ -1,0 +1,41 @@
+<div class="jumbotron">
+        
+        <span class="display-1">CAR POOLING</span>
+        <div class="row  align-self-center">
+                <img src="./src/assets/imgs/carpoollogo.png" class="img-fluid">
+        </div>
+        </div>
+<body>
+        
+        
+        <div class="container" *ngIf="flag1">
+               
+                <br><br><br>
+                <h1>  </h1>
+        
+                
+                <h2 class="text-center">LOGIN</h2>
+                
+        <br>
+                <div class="row">
+                        <div class="col-4">
+                                
+                        </div>
+                        <div class="col-4">
+        <ul class="list-unstyled">
+                
+        <li  ><a class="btn btn-block "  routerLink="/DriverComponent" routerLinkActive="active" >Driver</a></li>
+
+<br><br>
+
+<li ><a class="btn btn-block" routerLink="/UsersComponent" routerLinkActive="active" >Passenger</a></li>
+
+                
+                
+        </ul>  
+        </div>
+        </div>
+        </div>
+        
+        <router-outlet></router-outlet>
+</body>

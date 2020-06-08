@@ -1,0 +1,40 @@
+<div *ngIf="status1"  style="background-color:#577">
+    
+    <span class="fa fa-car"></span>
+    <h1>Drivers' Login  Page</h1>
+    <form #driverlogin = "ngForm" (ngSubmit) = "getDriversData(driverlogin.value)" >
+        <table>
+            <tr>
+        <td>Enter driver name: </td><td><input type = "text" name = "username" placeholder = "drivername" ngModel></td>
+        </tr>
+        <tr>
+        <td>Enter password: </td><td><input type = "password" name = "password" placeholder = "driverpassword" ngModel></td>
+        </tr>
+        <tr>
+        <td></td><td><input type = "submit" value = "submit"></td>
+        </tr>
+    </table>
+     </form>
+    <router-outlet></router-outlet>
+    </div>
+    
+    <div *ngIf="data && !removeDriverComponent" style="background-color:lightseagreen">
+    
+    <h1 class="text-center"> Welcome Driver </h1>
+    <form #driverDetails = "ngForm" (ngSubmit) = "setDriversData(driverDetails.value)" >
+        <table>
+        <tr>
+      <td>Enter Source name: </td><td><input type = "text" name = "source" placeholder = "source place" ngModel></td>
+      </tr>
+      <tr>
+      <td>Enter Destination: </td><td><input type = "text" name = "destination" placeholder = "destination place" ngModel></td>
+      </tr>
+      <tr>
+      <td></td><td><input type = "submit" value = "submit"></td>
+      <td><input type = "Reset" value = "Reset"></td>
+      <td><input type = "button" value = "Cancel" (click)="removeComponent()"></td>
+      </tr>
+      </table>
+      </form>
+    </div>
+   

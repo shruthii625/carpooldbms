@@ -1,0 +1,18 @@
+<body bgcolor='red'>
+        <h1>Users' Login Page</h1>
+        <form #userlogin = "ngForm" (ngSubmit) = "getUsersData(userlogin.value)" >
+            <table>
+                <tr>
+            <td>Enter user name: </td><td><input type = "text" name = "username" placeholder = "userrname" ngModel></td>
+            </tr>
+            <tr>
+            <td>Enter password: </td><td><input type = "password" name = "password" placeholder = "userrpassword" ngModel></td>
+            </tr>
+            <tr>
+            <td></td><td><input type = "submit" value = "submit"></td>
+            </tr>
+        </table>
+         </form>
+         <h1> {{data}} </h1>
+        <router-outlet></router-outlet>
+        </body>
